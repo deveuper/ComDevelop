@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 704f505ccc1cfce4fa27e06cfe754b77
+timeCreated: 1517370492
+licenseType: Pro
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - m_groupBloomMaterial: {fileID: 2100000, guid: 7ae87ebbd74151145a9ca252d700d968,
+      type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

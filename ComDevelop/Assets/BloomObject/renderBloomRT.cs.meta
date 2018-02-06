@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 97176090ce404ed4783479b678ff34a3
+timeCreated: 1517370543
+licenseType: Pro
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - m_mainCameraRef: {instanceID: 0}
+  - m_renderBloomTexShader: {fileID: 4800000, guid: 5a21a4bef1c159748a260e9ace35af7f,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
