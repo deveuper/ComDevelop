@@ -288,12 +288,6 @@
     <Compile Include="Assets\ComDevelop\LoadScene\Scene\Scripts\SceneData.cs" />
     <Compile Include="Assets\ComDevelop\LoadScene\Scene\Scripts\SilderWithCanvasLoad.cs" />
     <Compile Include="Assets\ComDevelop\LoadScene\Scene\Scripts\UnityLoadScene.cs" />
-    <Compile Include="Assets\ComDevelop\MeshEditor\MeshMaker\Script\MeshMaker.cs" />
-    <Compile Include="Assets\ComDevelop\MeshEditor\MeshMaker\Script\MeshMakerBase.cs" />
-    <Compile Include="Assets\ComDevelop\MeshEditor\MeshMaker\Script\MeshMakerEdge.cs" />
-    <Compile Include="Assets\ComDevelop\MeshEditor\MeshMaker\Script\MeshMakerTool.cs" />
-    <Compile Include="Assets\ComDevelop\MeshEditor\MeshMaker\Script\MeshMakerTriangle.cs" />
-    <Compile Include="Assets\ComDevelop\MeshEditor\MeshMaker\Script\MeshMakerVertex.cs" />
     <Compile Include="Assets\Uni-Excel\Scripts\MyExcel.cs" />
   </ItemGroup>
   <ItemGroup>

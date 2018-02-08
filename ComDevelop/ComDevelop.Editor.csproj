@@ -315,6 +315,14 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\ComDevelop\Editor\MeshMaker.cs" />
+    <Compile Include="Assets\ComDevelop\Editor\MeshMaker\MeshMakerEditor.cs" />
+    <Compile Include="Assets\ComDevelop\Editor\MeshMaker\MeshMakerUVExhibition.cs" />
+    <Compile Include="Assets\ComDevelop\Editor\MeshMaker\Script\MeshMakerBase.cs" />
+    <Compile Include="Assets\ComDevelop\Editor\MeshMaker\Script\MeshMakerEdge.cs" />
+    <Compile Include="Assets\ComDevelop\Editor\MeshMaker\Script\MeshMakerTool.cs" />
+    <Compile Include="Assets\ComDevelop\Editor\MeshMaker\Script\MeshMakerTriangle.cs" />
+    <Compile Include="Assets\ComDevelop\Editor\MeshMaker\Script\MeshMakerVertex.cs" />
     <Compile Include="Assets\ComDevelop\Editor\Model_FBXExporter\FBXExport_Tools\Core\FBXExporter.cs" />
     <Compile Include="Assets\ComDevelop\Editor\Model_FBXExporter\FBXExport_Tools\Core\FBXMaterialGetter.cs" />
     <Compile Include="Assets\ComDevelop\Editor\Model_FBXExporter\FBXExport_Tools\Core\FBXMeshGetter.cs" />
@@ -326,8 +334,6 @@
     <Compile Include="Assets\ComDevelop\Editor\Shader_Tools\MyEditor.cs" />
     <Compile Include="Assets\ComDevelop\Editor\SVN_Tools\SelectionUtil.cs" />
     <Compile Include="Assets\ComDevelop\Editor\SVN_Tools\SVNTool.cs" />
-    <Compile Include="Assets\ComDevelop\MeshEditor\MeshMaker\Editor\MeshMakerEditor.cs" />
-    <Compile Include="Assets\ComDevelop\MeshEditor\MeshMaker\Editor\MeshMakerUVExhibition.cs" />
     <Compile Include="Assets\ComDevelop\ShaderTemplate\Editor\ScriptsTemplate\LuaCreateUtils.cs" />
     <Compile Include="Assets\ComDevelop\ShaderTemplate\Editor\ScriptsTemplate\ProjectWindowUtilEx.cs" />
     <Compile Include="Assets\ComDevelop\ShaderTemplate\Editor\ScriptsTemplate\ScriptTemplateGenerator.cs" />
