@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Uni-Excel/Scene/Demo.unity
+- path: Assets/ComDevelop/ComTool/Camera/CameraRotateTarget/demoCamera.unity
   isLoaded: 1
   isActive: 1

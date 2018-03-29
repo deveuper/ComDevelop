@@ -43,11 +43,13 @@ namespace ComDevelop.ComTool
         {
             if (target)
             {
+                //PC Version--using mouse control
                 if (Input.GetMouseButton(1))
                 {
                     velocityX += xSpeed * Input.GetAxis("Mouse X") * startDistance * 0.02f;
                     velocityY += ySpeed * Input.GetAxis("Mouse Y") * 0.02f;
                 }
+
                 rotationYAxis += velocityX;
                 rotationXAxis -= velocityY;
                 rotationXAxis = ClampAngle(rotationXAxis, yMinLimit, yMaxLimit);
