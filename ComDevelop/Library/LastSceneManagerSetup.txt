@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/ComDevelop/ComTool/Camera/CameraRotateTarget/demoCamera.unity
+- path: Assets/ComDevelop/ComTool/MapMaker/Map1.unity
   isLoaded: 1
   isActive: 1

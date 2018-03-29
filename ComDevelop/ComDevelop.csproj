@@ -262,6 +262,9 @@
     <Compile Include="Assets\ComDevelop\ComTool\GameCompoent\GameSingleton.cs" />
     <Compile Include="Assets\ComDevelop\ComTool\GameCompoent\SimulateGravity.cs" />
     <Compile Include="Assets\ComDevelop\ComTool\GameCompoent\TransformHelper.cs" />
+    <Compile Include="Assets\ComDevelop\ComTool\MapMaker\ClickToMove.cs" />
+    <Compile Include="Assets\ComDevelop\ComTool\MapMaker\FreeCam.cs" />
+    <Compile Include="Assets\ComDevelop\ComTool\MapMaker\MeshTool.cs" />
     <Compile Include="Assets\ComDevelop\ComTool\MouseController\MouseScrollTarget.cs" />
     <Compile Include="Assets\ComDevelop\ComTool\MouseController\SimplePCController.cs" />
     <Compile Include="Assets\ComDevelop\ComTool\OpenFileEidtor\OpenFileName.cs" />
