@@ -294,6 +294,7 @@
     <Compile Include="Assets\ComDevelop\LoadScene\Scene\Scripts\SceneData.cs" />
     <Compile Include="Assets\ComDevelop\LoadScene\Scene\Scripts\SilderWithCanvasLoad.cs" />
     <Compile Include="Assets\ComDevelop\LoadScene\Scene\Scripts\UnityLoadScene.cs" />
+    <Compile Include="Assets\ComDevelop\MeshEditor\CombineMesher.cs" />
     <Compile Include="Assets\ComDevelop\MeshEditor\MeshMaker\Script\MeshMaker.cs" />
     <Compile Include="Assets\ComDevelop\MeshEditor\MeshMaker\Script\MeshMakerBase.cs" />
     <Compile Include="Assets\ComDevelop\MeshEditor\MeshMaker\Script\MeshMakerEdge.cs" />

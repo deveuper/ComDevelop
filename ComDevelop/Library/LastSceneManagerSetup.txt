@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/ComDevelop/ComTool/Camera/Camera3rd/Camera3rdDemo.unity
+- path: Assets/Combine.unity
   isLoaded: 1
   isActive: 1
