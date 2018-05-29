@@ -22,7 +22,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_2_0;UNITY_2017_2;UNITY_2017;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_GRID;ENABLE_TILEMAP;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;ENABLE_SPRITE_MASKING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_VIDEO;ENABLE_RMGUI;ENABLE_PACKMAN;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_STYLE_SHEETS;PLATFORM_STANDALONE_WIN;PLATFORM_STANDALONE;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_EVENT_QUEUE;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_AR;ENABLE_SPATIALTRACKING;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_2_0;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE;UNITY_PRO_LICENSE</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_2_0;UNITY_2017_2;UNITY_2017;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_GRID;ENABLE_TILEMAP;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;ENABLE_SPRITE_MASKING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_VIDEO;ENABLE_RMGUI;ENABLE_PACKMAN;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_STYLE_SHEETS;PLATFORM_STANDALONE_WIN;PLATFORM_STANDALONE;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_EVENT_QUEUE;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_AR;ENABLE_SPATIALTRACKING;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_2_0;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE;UNITY_PRO_LICENSE;CROSS_PLATFORM_INPUT</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
@@ -44,13 +44,26 @@
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="UnityEngine">
-      <HintPath>F:/Unity2017.2f3/Unity/Editor/Data/Managed\UnityEngine.dll</HintPath>
+      <HintPath>I:/Unity2017.2f3/Unity/Editor/Data/Managed\UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor">
-      <HintPath>F:/Unity2017.2f3/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+      <HintPath>I:/Unity2017.2f3/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\ComDevelop\Editor\CombineMAndTEditor.cs" />
+     <Compile Include="Assets\ComDevelop\Editor\CombineMesherEditor.cs" />
+     <Compile Include="Assets\ComDevelop\Editor\CombineMeshesAndTextures.cs" />
+     <Compile Include="Assets\ComDevelop\Editor\FindResources\FindReferenceAllScene.cs" />
+     <Compile Include="Assets\ComDevelop\Editor\FindResources\FindReferencesInProjects.cs" />
+     <Compile Include="Assets\ComDevelop\Editor\Model_FBXExporter\FBXExport_Tools\Core\FBXExporter.cs" />
+     <Compile Include="Assets\ComDevelop\Editor\Model_FBXExporter\FBXExport_Tools\Core\FBXMaterialGetter.cs" />
+     <Compile Include="Assets\ComDevelop\Editor\Model_FBXExporter\FBXExport_Tools\Core\FBXMeshGetter.cs" />
+     <Compile Include="Assets\ComDevelop\Editor\Model_FBXExporter\FBXExport_Tools\Core\FBXWriter.cs" />
+     <Compile Include="Assets\ComDevelop\Editor\Model_FBXExporter\FBXExport_Tools\FBXExporterUI.cs" />
+     <Compile Include="Assets\ComDevelop\Editor\Model_FBXExporter\TerrianExport_Tools\ExportTerrain.cs" />
+     <Compile Include="Assets\ComDevelop\Editor\Model_FBXExporter\TerrianExport_Tools\Object2Terrain.cs" />
+     <Compile Include="Assets\ComDevelop\Editor\SceneWindow\CameraView.cs" />
      <Compile Include="Assets\ComDevelop\Editor\Shader_Tools\MyEditor.cs" />
      <Compile Include="Assets\ComDevelop\Editor\SVN_Tools\SelectionUtil.cs" />
      <Compile Include="Assets\ComDevelop\Editor\SVN_Tools\SVNTool.cs" />
@@ -60,11 +73,6 @@
      <Compile Include="Assets\ComDevelop\ShaderTemplate\Editor\ScriptsTemplate\ProjectWindowUtilEx.cs" />
      <Compile Include="Assets\ComDevelop\ShaderTemplate\Editor\ScriptsTemplate\ScriptTemplateGenerator.cs" />
      <Compile Include="Assets\ComDevelop\ShaderTemplate\Editor\ScriptsTemplate\ShaderCreateUtils.cs" />
-     <Compile Include="Assets\WRP_FBXExporter\Editor\FBXExport_Tools\FBXExporter.cs" />
-     <Compile Include="Assets\WRP_FBXExporter\Editor\FBXExport_Tools\FBXMaterialGetter.cs" />
-     <Compile Include="Assets\WRP_FBXExporter\Editor\FBXExport_Tools\FBXMeshGetter.cs" />
-     <Compile Include="Assets\WRP_FBXExporter\Editor\FBXWriter.cs" />
-     <Compile Include="Assets\WRP_FBXExporter\Editor\WRP_FBXExporterUI.cs" />
      <None Include="Assets\ComDevelop\ShaderTemplate\Templates\Shaders\TerrainShaders\Splats\Standard-FirstPass.shader.txt" />
      <None Include="Assets\ComDevelop\ShaderTemplate\Templates\Shaders\Internal-GUITextureClipText.shader.txt" />
      <None Include="Assets\ComDevelop\ShaderTemplate\Templates\Shaders\UI\UI-Unlit-Transparent.shader.txt" />
@@ -141,10 +149,13 @@
      <None Include="Assets\ComDevelop\ShaderTemplate\Templates\Shaders\Cubemaps\CubeBlurOdd.shader.txt" />
      <None Include="Assets\ComDevelop\ShaderTemplate\Templates\Shaders\Mobile\Mobile-VertexLit.shader.txt" />
      <None Include="Assets\ComDevelop\ShaderTemplate\Templates\Shaders\Nature\TreeCreator\TreeCreatorBarkOptimized.shader.txt" />
+     <None Include="Assets\BloomObject\原帖地址.txt" />
      <None Include="Assets\ComDevelop\ShaderTemplate\Templates\Shaders\Nature\SoftOcclusion\TreeSoftOcclusionBarkRendertex.shader.txt" />
      <None Include="Assets\ComDevelop\ShaderTemplate\Templates\Shaders\Internal-ConvertTexture.shader.txt" />
+     <None Include="Assets\ComDevelop\Editor\FindResources\使用说明.txt" />
      <None Include="Assets\ComDevelop\ShaderTemplate\Templates\Shaders\Nature\SoftOcclusion\TreeSoftOcclusionLeavesRendertex.shader.txt" />
      <None Include="Assets\ComDevelop\ShaderTemplate\Templates\Shaders\Illumin-Bumped.shader.txt" />
+     <None Include="Assets\ComDevelop\ComTool\SimplePhysicsToolkit1.2\SimplePhysicsToolkit v1.2\SimplePhysicsToolkit\Readme-Overview.txt" />
      <None Include="Assets\ComDevelop\ShaderTemplate\Templates\Shaders\Normal-DiffuseFast.shader.txt" />
      <None Include="Assets\ComDevelop\ShaderTemplate\Templates\Shaders\Particle VertexLit Blended.shader.txt" />
      <None Include="Assets\ComDevelop\ShaderTemplate\Templates\Shaders\Reflect-Parallax.shader.txt" />
@@ -153,10 +164,12 @@
      <None Include="Assets\ComDevelop\ShaderTemplate\Templates\Shaders\Internal-Flare.shader.txt" />
      <None Include="Assets\ComDevelop\ShaderTemplate\Templates\Shaders\Nature\TreeCreator\TreeCreatorLeavesOptimized.shader.txt" />
      <None Include="Assets\ComDevelop\ShaderTemplate\Templates\Shaders\AlphaTest-Bumped.shader.txt" />
+     <None Include="Assets\BloomObject\AE_GroupBloom.shader" />
      <None Include="Assets\ComDevelop\ShaderTemplate\Templates\Shaders\Internal-GUITextureClip.shader.txt" />
      <None Include="Assets\ComDevelop\ShaderTemplate\Templates\Shaders\Mobile\Mobile-Particle-Add.shader.txt" />
      <None Include="Assets\ComDevelop\ShaderTemplate\Templates\Shaders\Internal-BlitCopyDepth.shader.txt" />
      <None Include="Assets\ComDevelop\ShaderTemplate\Templates\Shaders\StandardSpecular.shader.txt" />
+     <None Include="Assets\BloomObject\bloomEmitter.shader" />
      <None Include="Assets\ComDevelop\ShaderTemplate\Templates\Shaders\VideoDecodeOSX.shader.txt" />
      <None Include="Assets\ComDevelop\ShaderTemplate\Templates\Shaders\UI\UI-Unlit-TextDetail.shader.txt" />
      <None Include="Assets\ComDevelop\ShaderTemplate\Templates\Shaders\GIDebug\ShowLightMask.shader.txt" />
@@ -165,6 +178,7 @@
      <None Include="Assets\ComDevelop\ShaderTemplate\Templates\Shaders\Internal-DeferredShading.shader.txt" />
      <None Include="Assets\ComDevelop\ShaderTemplate\Templates\Shaders\AlphaTest-SoftEdgeUnlit.shader.txt" />
      <None Include="Assets\ComDevelop\ShaderTemplate\Templates\Shaders\Mobile\Mobile-Lightmap-Unlit.shader.txt" />
+     <None Include="Assets\ComDevelop\ComTool\SimplePhysicsToolkit1.2\ReadMe.txt" />
      <None Include="Assets\ComDevelop\ShaderTemplate\Templates\Shaders\Internal-BlitCopy.shader.txt" />
      <None Include="Assets\ComDevelop\ShaderTemplate\Templates\Shaders\VR\Shaders\Internal-VRDistortion.shader.txt" />
      <None Include="Assets\ComDevelop\ShaderTemplate\Templates\Shaders\Cubemaps\CubeCopy.shader.txt" />
@@ -173,7 +187,7 @@
      <None Include="Assets\ComDevelop\ShaderTemplate\Templates\Shaders\GIDebug\VertexColors.shader.txt" />
      <None Include="Assets\ComDevelop\ShaderTemplate\Templates\Shaders\Internal-ScreenSpaceShadows.shader.txt" />
      <None Include="Assets\ComDevelop\ShaderTemplate\Templates\Shaders\Internal-DeferredReflections.shader.txt" />
-     <None Include="Assets\WRP_FBXExporter\ReadMe - 1.0.txt" />
+     <None Include="Assets\ComDevelop\Editor\Model_FBXExporter\FBXExport_Tools\ReadMe.txt" />
      <None Include="Assets\ComDevelop\ShaderTemplate\Templates\Shaders\Normal-ParallaxSpec.shader.txt" />
      <None Include="Assets\ComDevelop\ShaderTemplate\Templates\Shaders\VR\Shaders\SpatialMappingOcclusion.shader.txt" />
      <None Include="Assets\ComDevelop\ShaderTemplate\Templates\Shaders\Internal-MotionVectors.shader.txt" />
@@ -203,8 +217,10 @@
      <None Include="Assets\ComDevelop\ShaderTemplate\Templates\Shaders\Reflect-BumpNolight.shader.txt" />
      <None Include="Assets\ComDevelop\ShaderTemplate\Templates\Shaders\Unlit\Unlit-Normal.shader.txt" />
      <None Include="Assets\ComDevelop\ShaderTemplate\Templates\Shaders\Wind\Shaders\SampleSurface.shader.txt" />
+     <None Include="Assets\ComDevelop\Editor\Model_FBXExporter\TerrianExport_Tools\ReadMe.txt" />
      <None Include="Assets\ComDevelop\ShaderTemplate\Templates\Shaders\Lightmap-BumpSpec.shader.txt" />
      <None Include="Assets\ComDevelop\ShaderTemplate\Templates\Shaders\Skybox-Cubed.shader.txt" />
+     <None Include="Assets\BloomObject\renderBloomTex.shader" />
      <None Include="Assets\ComDevelop\ShaderTemplate\Templates\Shaders\UI\UI-Lit-Detail.shader.txt" />
      <None Include="Assets\ComDevelop\ComUI\Core\ComUI.cd" />
      <None Include="Assets\ComDevelop\ShaderTemplate\Templates\Shaders\Particle Premultiply Blend.shader.txt" />
@@ -221,91 +237,88 @@
      <None Include="Assets\ComDevelop\ShaderTemplate\Templates\Shaders\Mobile\Mobile-Particle-Multiply.shader.txt" />
      <None Include="Assets\ComDevelop\ShaderTemplate\Templates\Shaders\Particle AddMultiply.shader.txt" />
  <Reference Include="Vuforia.UnityExtensions.Editor">
- <HintPath>F:/Unity2017.2f3/Unity/Editor/Data/PlaybackEngines/VuforiaSupport/Managed/Editor/Vuforia.UnityExtensions.Editor.dll</HintPath>
+ <HintPath>I:/Unity2017.2f3/Unity/Editor/Data/PlaybackEngines/VuforiaSupport/Managed/Editor/Vuforia.UnityExtensions.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Vuforia.UnityExtensions">
- <HintPath>F:/Unity2017.2f3/Unity/Editor/Data/PlaybackEngines/VuforiaSupport/Managed/Runtime/Vuforia.UnityExtensions.dll</HintPath>
+ <HintPath>I:/Unity2017.2f3/Unity/Editor/Data/PlaybackEngines/VuforiaSupport/Managed/Runtime/Vuforia.UnityExtensions.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>F:/Unity2017.2f3/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ <HintPath>I:/Unity2017.2f3/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>F:/Unity2017.2f3/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll</HintPath>
+ <HintPath>I:/Unity2017.2f3/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
- <HintPath>F:/Unity2017.2f3/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ <HintPath>I:/Unity2017.2f3/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Networking">
- <HintPath>F:/Unity2017.2f3/Unity/Editor/Data/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll</HintPath>
+ <HintPath>I:/Unity2017.2f3/Unity/Editor/Data/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.TestRunner">
- <HintPath>F:/Unity2017.2f3/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/Editor/UnityEditor.TestRunner.dll</HintPath>
+ <HintPath>I:/Unity2017.2f3/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/Editor/UnityEditor.TestRunner.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.TestRunner">
- <HintPath>F:/Unity2017.2f3/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
+ <HintPath>I:/Unity2017.2f3/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
  </Reference>
  <Reference Include="nunit.framework">
- <HintPath>F:/Unity2017.2f3/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
+ <HintPath>I:/Unity2017.2f3/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Timeline">
- <HintPath>F:/Unity2017.2f3/Unity/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll</HintPath>
+ <HintPath>I:/Unity2017.2f3/Unity/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Timeline">
- <HintPath>F:/Unity2017.2f3/Unity/Editor/Data/UnityExtensions/Unity/Timeline/Editor/UnityEditor.Timeline.dll</HintPath>
+ <HintPath>I:/Unity2017.2f3/Unity/Editor/Data/UnityExtensions/Unity/Timeline/Editor/UnityEditor.Timeline.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.TreeEditor">
- <HintPath>F:/Unity2017.2f3/Unity/Editor/Data/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll</HintPath>
+ <HintPath>I:/Unity2017.2f3/Unity/Editor/Data/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UIAutomation">
- <HintPath>F:/Unity2017.2f3/Unity/Editor/Data/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll</HintPath>
+ <HintPath>I:/Unity2017.2f3/Unity/Editor/Data/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UIAutomation">
- <HintPath>F:/Unity2017.2f3/Unity/Editor/Data/UnityExtensions/Unity/UIAutomation/Editor/UnityEditor.UIAutomation.dll</HintPath>
+ <HintPath>I:/Unity2017.2f3/Unity/Editor/Data/UnityExtensions/Unity/UIAutomation/Editor/UnityEditor.UIAutomation.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.GoogleAudioSpatializer">
- <HintPath>F:/Unity2017.2f3/Unity/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/Editor/UnityEditor.GoogleAudioSpatializer.dll</HintPath>
+ <HintPath>I:/Unity2017.2f3/Unity/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/Editor/UnityEditor.GoogleAudioSpatializer.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.GoogleAudioSpatializer">
- <HintPath>F:/Unity2017.2f3/Unity/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll</HintPath>
+ <HintPath>I:/Unity2017.2f3/Unity/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.HoloLens">
- <HintPath>F:/Unity2017.2f3/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/Editor/UnityEditor.HoloLens.dll</HintPath>
+ <HintPath>I:/Unity2017.2f3/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/Editor/UnityEditor.HoloLens.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.HoloLens">
- <HintPath>F:/Unity2017.2f3/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+ <HintPath>I:/Unity2017.2f3/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.SpatialTracking">
- <HintPath>F:/Unity2017.2f3/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/Editor/UnityEditor.SpatialTracking.dll</HintPath>
+ <HintPath>I:/Unity2017.2f3/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/Editor/UnityEditor.SpatialTracking.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.SpatialTracking">
- <HintPath>F:/Unity2017.2f3/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
+ <HintPath>I:/Unity2017.2f3/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.VR">
- <HintPath>F:/Unity2017.2f3/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll</HintPath>
+ <HintPath>I:/Unity2017.2f3/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Graphs">
- <HintPath>F:/Unity2017.2f3/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
+ <HintPath>I:/Unity2017.2f3/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Android.Extensions">
- <HintPath>F:/Unity2017.2f3/Unity/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
+ <HintPath>I:/Unity2017.2f3/Unity/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions">
- <HintPath>F:/Unity2017.2f3/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll</HintPath>
+ <HintPath>I:/Unity2017.2f3/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.WSA.Extensions">
- <HintPath>F:/Unity2017.2f3/Unity/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.WSA.Extensions.dll</HintPath>
+ <HintPath>I:/Unity2017.2f3/Unity/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.WSA.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.WebGL.Extensions">
- <HintPath>F:/Unity2017.2f3/Unity/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll</HintPath>
+ <HintPath>I:/Unity2017.2f3/Unity/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.WindowsStandalone.Extensions">
- <HintPath>F:/Unity2017.2f3/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
+ <HintPath>I:/Unity2017.2f3/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.OSXStandalone.Extensions">
- <HintPath>F:/Unity2017.2f3/Unity/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
- </Reference>
- <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
- <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/2015/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
+ <HintPath>I:/Unity2017.2f3/Unity/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="Excel">
  <HintPath>F:/UnityPorjects/TempUsing/ComDevelop/Assets/Uni-Excel/Plugins/Excel.dll</HintPath>
@@ -338,10 +351,10 @@
  <HintPath>C:/Users/ZLKJ_17110501/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@1.0.1/Editor/UnityEditor.Purchasing.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
- <HintPath>F:/Unity2017.2f3/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+ <HintPath>I:/Unity2017.2f3/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Common">
- <HintPath>F:/Unity2017.2f3/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll</HintPath>
+ <HintPath>I:/Unity2017.2f3/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

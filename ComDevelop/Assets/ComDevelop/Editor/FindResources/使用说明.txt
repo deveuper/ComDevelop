@@ -1,0 +1,6 @@
+﻿在Project面板中，
+1.选择需要查找的物体
+2.单击右键，
+3. 
+    a) 当该资源在其他scene中出现时，选择Find References In All Scenes
+    b) 查找该资源在Project面板中的位置，选择Find References In Projects
