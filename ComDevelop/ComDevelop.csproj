@@ -273,6 +273,10 @@
     <Compile Include="Assets\ComDevelop\ComTool\MapMaker\MeshTool.cs" />
     <Compile Include="Assets\ComDevelop\ComTool\MouseController\MouseScrollTarget.cs" />
     <Compile Include="Assets\ComDevelop\ComTool\MouseController\SimplePCController.cs" />
+    <Compile Include="Assets\ComDevelop\ComTool\OpenEXE\Scripts\ButtonClearAllData.cs" />
+    <Compile Include="Assets\ComDevelop\ComTool\OpenEXE\Scripts\ChangeAlphaTest.cs" />
+    <Compile Include="Assets\ComDevelop\ComTool\OpenEXE\Scripts\DataControl.cs" />
+    <Compile Include="Assets\ComDevelop\ComTool\OpenEXE\Scripts\OpenEXE.cs" />
     <Compile Include="Assets\ComDevelop\ComTool\OpenFileEidtor\OpenFileName.cs" />
     <Compile Include="Assets\ComDevelop\ComTool\OpenFileEidtor\OpenWindow.cs" />
     <Compile Include="Assets\ComDevelop\ComTool\ProgramTools\ShowFPS.cs" />
@@ -314,6 +318,7 @@
     <None Include="Assets\BloomObject\renderBloomTex.shader" />
     <None Include="Assets\BloomObject\原帖地址.txt" />
     <None Include="Assets\ComDevelop\ComTool\Camera\CameraMultipleScreen\readMe.txt" />
+    <None Include="Assets\ComDevelop\ComTool\OpenEXE\Textures and Sprites\SF UI\Background\LICENSE.txt" />
     <None Include="Assets\ComDevelop\ComTool\SimplePhysicsToolkit1.2\ReadMe.txt" />
     <None Include="Assets\ComDevelop\ComTool\SimplePhysicsToolkit1.2\SimplePhysicsToolkit v1.2\SimplePhysicsToolkit\Readme-Overview.txt" />
     <None Include="Assets\ComDevelop\ComUI\Core\ComUI.cd" />
