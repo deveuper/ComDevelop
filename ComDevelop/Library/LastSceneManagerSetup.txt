@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/New Scene 2.unity
+- path: Assets/ComDevelop/ArtProcessing/AlphaChange/AlphaCahangeScene.unity
   isLoaded: 1
   isActive: 1

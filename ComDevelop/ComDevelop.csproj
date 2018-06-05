@@ -252,6 +252,10 @@
     <Compile Include="Assets\BloomObject\letRenderTextureAspectEqualsToScreenAspect.cs" />
     <Compile Include="Assets\BloomObject\renderBloomRT.cs" />
     <Compile Include="Assets\CameraFollow.cs" />
+    <Compile Include="Assets\ComDevelop\ArtProcessing\AlphaChange\AlphaChangePercent.cs" />
+    <Compile Include="Assets\ComDevelop\ArtProcessing\AlphaChange\ChangeAlpha.cs" />
+    <Compile Include="Assets\ComDevelop\ArtProcessing\AlphaChange\MaterialRenderingMode.cs" />
+    <Compile Include="Assets\ComDevelop\ArtProcessing\AlphaChange\ShowAlpha.cs" />
     <Compile Include="Assets\ComDevelop\ComTool\Camera\Camera3rd\ThirdPlayerController.cs" />
     <Compile Include="Assets\ComDevelop\ComTool\Camera\CameraMovement.cs" />
     <Compile Include="Assets\ComDevelop\ComTool\Camera\CameraMultipleScreen\Demo\DisplayController.cs" />
@@ -313,6 +317,7 @@
     <None Include="Assets\ComDevelop\ComTool\SimplePhysicsToolkit1.2\ReadMe.txt" />
     <None Include="Assets\ComDevelop\ComTool\SimplePhysicsToolkit1.2\SimplePhysicsToolkit v1.2\SimplePhysicsToolkit\Readme-Overview.txt" />
     <None Include="Assets\ComDevelop\ComUI\Core\ComUI.cd" />
+    <None Include="Assets\ComDevelop\Editor\FindResources\使用说明.txt" />
     <None Include="Assets\ComDevelop\Editor\Model_FBXExporter\FBXExport_Tools\ReadMe.txt" />
     <None Include="Assets\ComDevelop\Editor\Model_FBXExporter\TerrianExport_Tools\ReadMe.txt" />
     <None Include="Assets\ComDevelop\Editor\SVN_Tools\SVN_noteness.txt" />

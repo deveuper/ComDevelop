@@ -318,6 +318,8 @@
     <Compile Include="Assets\ComDevelop\Editor\CombineMAndTEditor.cs" />
     <Compile Include="Assets\ComDevelop\Editor\CombineMesherEditor.cs" />
     <Compile Include="Assets\ComDevelop\Editor\CombineMeshesAndTextures.cs" />
+    <Compile Include="Assets\ComDevelop\Editor\FindResources\FindReferenceAllScene.cs" />
+    <Compile Include="Assets\ComDevelop\Editor\FindResources\FindReferencesInProjects.cs" />
     <Compile Include="Assets\ComDevelop\Editor\Model_FBXExporter\FBXExport_Tools\Core\FBXExporter.cs" />
     <Compile Include="Assets\ComDevelop\Editor\Model_FBXExporter\FBXExport_Tools\Core\FBXMaterialGetter.cs" />
     <Compile Include="Assets\ComDevelop\Editor\Model_FBXExporter\FBXExport_Tools\Core\FBXMeshGetter.cs" />
@@ -345,6 +347,7 @@
     <None Include="Assets\ComDevelop\ComTool\SimplePhysicsToolkit1.2\ReadMe.txt" />
     <None Include="Assets\ComDevelop\ComTool\SimplePhysicsToolkit1.2\SimplePhysicsToolkit v1.2\SimplePhysicsToolkit\Readme-Overview.txt" />
     <None Include="Assets\ComDevelop\ComUI\Core\ComUI.cd" />
+    <None Include="Assets\ComDevelop\Editor\FindResources\使用说明.txt" />
     <None Include="Assets\ComDevelop\Editor\Model_FBXExporter\FBXExport_Tools\ReadMe.txt" />
     <None Include="Assets\ComDevelop\Editor\Model_FBXExporter\TerrianExport_Tools\ReadMe.txt" />
     <None Include="Assets\ComDevelop\Editor\SVN_Tools\SVN_noteness.txt" />
