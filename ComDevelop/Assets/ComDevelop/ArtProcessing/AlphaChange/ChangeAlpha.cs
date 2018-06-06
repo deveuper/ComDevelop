@@ -9,8 +9,14 @@ public class ChangeAlpha : MonoBehaviour
     private Renderer[] mRender;
     private float alphaNum;
     private Color[] tempColor;
-    private bool alphaChangeBool;
-    private bool alphaShowChangeBool;
+    /// <summary>
+    /// 控制：变为透明
+    /// </summary>
+    private bool alphaChangeToTransBool;
+    /// <summary>
+    /// 控制：变回与原状态
+    /// </summary>
+    private bool alphaChangeToBackBool;
 
     public float speedChange;
     public float fadePercent;
@@ -18,11 +24,11 @@ public class ChangeAlpha : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (alphaChangeBool)
+        if (alphaChangeToTransBool)
         {
             if (GameObjFade() == fadePercent)
             {
-                alphaChangeBool = false;
+                alphaChangeToTransBool = false;
                 if (fadePercent == 0)
                 {
                     gameObject.SetActive(false);
@@ -30,11 +36,11 @@ public class ChangeAlpha : MonoBehaviour
             }
         }
 
-        if (alphaShowChangeBool)
+        if (alphaChangeToBackBool)
         {
             if (GameObjShow() == fadePercent)
             {
-                alphaShowChangeBool = false;
+                alphaChangeToBackBool = false;
                 if (fadePercent == 1)
                 {
                     gameObject.SetActive(true);
@@ -44,24 +50,28 @@ public class ChangeAlpha : MonoBehaviour
     }
 
 
-
     public void FadeGameObjInit()
     {
-        if (alphaChangeBool == false)
+        if (alphaChangeToTransBool == false)
         {
+            alphaChangeToTransBool = false;
+            alphaChangeToBackBool = false;
+
             alphaNum = 1;
             mRender = gameObject.GetComponentsInChildren<Renderer>();
             tempColor = new Color[mRender.Length];
             for (int i = 0; i < mRender.Length; ++i)
             {
                 tempColor[i] = mRender[i].material.color;
-                SetMaterialRenderingMode(mRender[i].material, RenderingMode.Fade);
+                MaterialRenderingMode.SetMaterialRenderingMode(mRender[i].material, RenderingMode.Fade);
                 alphaNum = tempColor[i].a;
                 mRender[i].material.SetInt("_ZWrite", 1);
 
             }
-            alphaChangeBool = true;
 
+            //运行完毕后，新的alphaNum为物体当前透明度
+            alphaChangeToTransBool = true;
+            alphaChangeToBackBool = false;
         }
     }
 
@@ -79,11 +89,13 @@ public class ChangeAlpha : MonoBehaviour
     }
 
 
-
     public void ShowGameObjInit()
     {
-        if (alphaShowChangeBool == false)
+        if (alphaChangeToBackBool == false)
         {
+            alphaChangeToTransBool = false;
+            alphaChangeToBackBool = false;
+
             alphaNum = 0;
             mRender = gameObject.GetComponentsInChildren<Renderer>();
             tempColor = new Color[mRender.Length];
@@ -96,8 +108,8 @@ public class ChangeAlpha : MonoBehaviour
                 mRender[i].material.SetInt("_ZWrite", 1);
 
             }
-            alphaShowChangeBool = true;
-
+            alphaChangeToBackBool = true;
+            alphaChangeToTransBool = false;
         }
     }
 
@@ -112,48 +124,5 @@ public class ChangeAlpha : MonoBehaviour
             mRender[i].material.color = tempColor[i];
         }
         return alphaNum;
-    }
-
-    public static void SetMaterialRenderingMode(Material material, RenderingMode renderingMode)
-    {
-        switch (renderingMode)
-        {
-            case RenderingMode.Opaque:
-                material.SetInt("_SrcBlend", (int)UnityEngine.Rendering.BlendMode.One);
-                material.SetInt("_DstBlend", (int)UnityEngine.Rendering.BlendMode.Zero);
-                material.SetInt("_ZWrite", 1);
-                material.DisableKeyword("_ALPHATEST_ON");
-                material.DisableKeyword("_ALPHABLEND_ON");
-                material.DisableKeyword("_ALPHAPREMULTIPLY_ON");
-                material.renderQueue = -1;
-                break;
-            case RenderingMode.Cutout:
-                material.SetInt("_SrcBlend", (int)UnityEngine.Rendering.BlendMode.One);
-                material.SetInt("_DstBlend", (int)UnityEngine.Rendering.BlendMode.Zero);
-                material.SetInt("_ZWrite", 1);
-                material.EnableKeyword("_ALPHATEST_ON");
-                material.DisableKeyword("_ALPHABLEND_ON");
-                material.DisableKeyword("_ALPHAPREMULTIPLY_ON");
-                material.renderQueue = 2450;
-                break;
-            case RenderingMode.Fade:
-                material.SetInt("_SrcBlend", (int)UnityEngine.Rendering.BlendMode.SrcAlpha);
-                material.SetInt("_DstBlend", (int)UnityEngine.Rendering.BlendMode.OneMinusSrcAlpha);
-                material.SetInt("_ZWrite", 1);// material.SetInt("_ZWrite", 0);
-                material.DisableKeyword("_ALPHATEST_ON");
-                material.EnableKeyword("_ALPHABLEND_ON");
-                material.DisableKeyword("_ALPHAPREMULTIPLY_ON");
-                material.renderQueue = 3000;
-                break;
-            case RenderingMode.Transparent:
-                material.SetInt("_SrcBlend", (int)UnityEngine.Rendering.BlendMode.One);
-                material.SetInt("_DstBlend", (int)UnityEngine.Rendering.BlendMode.OneMinusSrcAlpha);
-                material.SetInt("_ZWrite", 0);
-                material.DisableKeyword("_ALPHATEST_ON");
-                material.DisableKeyword("_ALPHABLEND_ON");
-                material.EnableKeyword("_ALPHAPREMULTIPLY_ON");
-                material.renderQueue = 3000;
-                break;
-        }
     }
 }

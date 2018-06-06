@@ -11,7 +11,15 @@ namespace ComDevelop.ART
         private Renderer[] mRender;
         private float alphaNum;
         private Color[] tempColor;
-        private bool alphaChangeBool;
+        /// <summary>
+        /// 控制：变为透明
+        /// </summary>
+        private bool alphaChangeToTransBool;
+        /// <summary>
+        /// 控制：变回与原状态
+        /// </summary>
+        private bool alphaChangeToBackBool;
+
         private float speedChange;
 
         public float fadePercent;
@@ -19,7 +27,7 @@ namespace ComDevelop.ART
         // Update is called once per frame
         void Update()
         {
-            if (alphaChangeBool)
+            if (alphaChangeToTransBool)
             {
                 if (GameObjFade() == fadePercent)
                 {
@@ -27,14 +35,31 @@ namespace ComDevelop.ART
                     {
                         gameObject.SetActive(false);
                     }
-                    alphaChangeBool = false;
+                    alphaChangeToTransBool = false;
+                }
+            }
+            if (alphaChangeToBackBool)
+            {
+                if (GameObjShow() == fadePercent)
+                {
+                    alphaChangeToBackBool = false;
+
+                    if (fadePercent == 1)
+                    {
+                        gameObject.SetActive(true);
+                    }
                 }
             }
         }
-
+        /// <summary>
+        /// 开始隐藏物体
+        /// </summary>
+        /// <param name="obj">需要隐藏的物体：必须有MeshRenderer</param>
+        /// <param name="percnet">0~1之间需要改变的透明度</param>
+        /// <param name="speed">速度，建议小数</param>
         public void FadeGameObjInit(GameObject obj, float percnet, float speed)
         {
-            if (alphaChangeBool == false)
+            if (alphaChangeToTransBool == false)
             {
                 alphaNum = 1;
                 mRender = obj.GetComponentsInChildren<Renderer>();
@@ -43,16 +68,18 @@ namespace ComDevelop.ART
                 {
                     tempColor[i] = mRender[i].material.color;
                     MaterialRenderingMode.SetMaterialRenderingMode(mRender[i].material, RenderingMode.Fade);
-                    tempColor[i].a = alphaNum;
+                    //tempColor[i].a = alphaNum;
+                    alphaNum = tempColor[i].a;
                     mRender[i].material.SetInt("_ZWrite", 1);
                 }
-                alphaChangeBool = true;
+                alphaChangeToTransBool = true;
+                alphaChangeToBackBool = false;
                 fadePercent = percnet;
                 speedChange = speed;
             }
         }
 
-        float GameObjFade()
+        private float GameObjFade() //手动lerp---此方式，可以真正的得到 a==b的值
         {
             alphaNum -= Time.deltaTime * speedChange;
             alphaNum = Mathf.Max(alphaNum, fadePercent);
@@ -60,6 +87,52 @@ namespace ComDevelop.ART
             {
                 mRender[i].material.SetInt("_ZWrite", 1);
                 tempColor[i].a = alphaNum;
+                mRender[i].material.color = tempColor[i];
+            }
+            return alphaNum;
+        }
+        /// <summary>
+        /// 开始显示物体
+        /// </summary>
+        /// <param name="obj">需要显示的物体：必须有MeshRnederer</param>
+        /// <param name="percnet"></param>
+        /// <param name="speed"></param>
+        public void ShowGameObjInit(GameObject obj, float percnet, float speed)
+        {
+            if (alphaChangeToBackBool == false)
+            {
+                alphaChangeToTransBool = false;
+                alphaChangeToBackBool = false;
+
+                alphaNum = 0;
+                mRender = obj.GetComponentsInChildren<Renderer>();
+                tempColor = new Color[mRender.Length];
+
+                for (int i = 0; i < mRender.Length; ++i)
+                {
+                    tempColor[i] = mRender[i].material.color;
+                    MaterialRenderingMode.SetMaterialRenderingMode(mRender[i].material, RenderingMode.Fade);
+                    alphaNum = tempColor[i].a;
+                    mRender[i].material.SetInt("_ZWrite", 1);
+
+                }
+                fadePercent = percnet;
+                speedChange = speed;
+
+                alphaChangeToBackBool = true;
+                alphaChangeToTransBool = false;
+            }
+        }
+
+        float GameObjShow()
+        {
+            alphaNum += Time.deltaTime * speedChange;
+            alphaNum = Mathf.Min(alphaNum, fadePercent);
+            for (int i = 0; i < mRender.Length; ++i)
+            {
+                mRender[i].material.SetInt("_ZWrite", 1);
+                tempColor[i].a = alphaNum;
+                //Debug.Log( "当前的::" + alphaNum);
                 mRender[i].material.color = tempColor[i];
             }
             return alphaNum;
