@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2017
+# Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComDevelop", "ComDevelop.csproj", "{350639BB-FCB2-B227-2185-2672811992FC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComDevelop.Editor", "ComDevelop.Editor.csproj", "{DE7DB58C-339B-2F4D-DD1F-27418FF505F6}"

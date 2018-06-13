@@ -67,7 +67,18 @@ namespace ComDevelop.ART
                 for (int i = 0; i < mRender.Length; ++i)
                 {
                     tempColor[i] = mRender[i].material.color;
-                    MaterialRenderingMode.SetMaterialRenderingMode(mRender[i].material, RenderingMode.Fade);
+                    //MaterialRenderingMode.SetMaterialRenderingMode(mRender[i].material, RenderingMode.Fade);
+
+                    mRender[i].material.SetInt("_SrcBlend", (int)UnityEngine.Rendering.BlendMode.SrcAlpha);
+                    mRender[i].material.SetInt("_DstBlend", (int)UnityEngine.Rendering.BlendMode.OneMinusSrcAlpha);
+                    mRender[i].material.SetInt("_ZWrite", 0);
+                    mRender[i].material.DisableKeyword("_ALPHATEST_ON");
+                    mRender[i].material.EnableKeyword("_ALPHABLEND_ON");
+                    mRender[i].material.DisableKeyword("_ALPHAPREMULTIPLY_ON");
+                    mRender[i].material.renderQueue = 3000;
+
+
+
                     //tempColor[i].a = alphaNum;
                     alphaNum = tempColor[i].a;
                     mRender[i].material.SetInt("_ZWrite", 1);

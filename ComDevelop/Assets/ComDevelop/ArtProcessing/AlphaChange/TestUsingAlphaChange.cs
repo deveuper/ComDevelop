@@ -18,10 +18,12 @@ public class TestUsingAlphaChange : MonoBehaviour
     [Header("透明的比率：小数")]
     public float AlphaValue = 0.5f;
 
+    public Text textUI;
+
     // Use this for initialization
     void Start()
     {
-
+        textUI.text = "";
         buttonAlpha.onClick.AddListener(StartAlpha);
         buttonAlphaBack.onClick.AddListener(StartAlphaBack);
     }
@@ -46,7 +48,10 @@ public class TestUsingAlphaChange : MonoBehaviour
         }
         acPercent.ShowGameObjInit(modelAlpha, 1f, AlphaSpeed * 0.01f);
     }
-
+    private void Update()
+    {
+        textUI.text = modelAlpha.GetComponent<Renderer>().material.color.a.ToString();
+    }
 
 
 }
