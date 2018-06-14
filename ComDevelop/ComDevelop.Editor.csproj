@@ -302,15 +302,6 @@
     <Reference Include="UnityEditor.Purchasing">
       <HintPath>C:/Users/ZLKJ_17110501/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@1.0.1/Editor/UnityEditor.Purchasing.dll</HintPath>
     </Reference>
-    <Reference Include="UnityFbxSdk">
-      <HintPath>Assets/FbxExporters/Editor/FbxSdk/Plugins/UnityFbxSdk.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityFbxPrefab">
-      <HintPath>Assets/FbxExporters/UnityFbxPrefab.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityFbxExporterEditor">
-      <HintPath>Assets/FbxExporters/Editor/UnityFbxExporterEditor.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>I:/Unity2017.2f3/Unity/Editor/Data/PlaybackEngines/iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
     </Reference>
@@ -515,10 +506,6 @@
     <None Include="Assets\ComDevelop\ShaderTemplate\Templates\Shaders\VideoDecodeOSX.shader.txt" />
     <None Include="Assets\ComDevelop\ShaderTemplate\Templates\Shaders\Wind\Shaders\SampleSurface.shader.txt" />
     <None Include="Assets\ComDevelop\ShaderTemplate\Templates\Shaders\Wind\Shaders\SampleVF.shader.txt" />
-    <None Include="Assets\FbxExporters\Editor\FbxSdk\LICENSE.txt" />
-    <None Include="Assets\FbxExporters\Editor\FbxSdk\README.txt" />
-    <None Include="Assets\FbxExporters\LICENSE.txt" />
-    <None Include="Assets\FbxExporters\README.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
