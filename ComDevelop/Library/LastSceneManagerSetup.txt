@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/ComDevelop/ArtProcessing/AlphaChange/AlphaCahangeScene.unity
+- path: Assets/ComDevelop/ComTool/Input/MouseEvent/MouseEvent.unity
   isLoaded: 1
   isActive: 1
