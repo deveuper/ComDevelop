@@ -346,6 +346,7 @@
     <None Include="Assets\BloomObject\renderBloomTex.shader" />
     <None Include="Assets\BloomObject\原帖地址.txt" />
     <None Include="Assets\ComDevelop\ComTool\Camera\CameraMultipleScreen\readMe.txt" />
+    <None Include="Assets\ComDevelop\ComTool\DebugTool\介绍.txt" />
     <None Include="Assets\ComDevelop\ComTool\OpenEXE\Textures and Sprites\SF UI\Background\LICENSE.txt" />
     <None Include="Assets\ComDevelop\ComTool\SimplePhysicsToolkit1.2\ReadMe.txt" />
     <None Include="Assets\ComDevelop\ComTool\SimplePhysicsToolkit1.2\SimplePhysicsToolkit v1.2\SimplePhysicsToolkit\Readme-Overview.txt" />
