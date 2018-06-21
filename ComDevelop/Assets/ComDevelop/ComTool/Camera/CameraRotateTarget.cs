@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+using UnityEngine.EventSystems;
 
 namespace ComDevelop.ComTool
 {
@@ -63,7 +64,9 @@ namespace ComDevelop.ComTool
         }
         void LateUpdate()
         {
-            if (target)
+            //if (target)
+            //修改，添加点击时，不穿透UI的条件
+            if (target && EventSystem.current.IsPointerOverGameObject() == false)
             {
                 ChoosePlatform();
                 RaycastPoint();
