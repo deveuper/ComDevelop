@@ -11,6 +11,9 @@ public class Sub_B : MonoBehaviour
     {
         //粉丝通过订阅偶像来获取偶像的咨询, 并在得到讯息后执行相应的动作
         myIdol.idolEvent.AddListener(HateIdol);
+
+        myIdol.event1.AddListener(stringWrite2);
+
     }
 
     /// <summary>
@@ -19,6 +22,7 @@ public class Sub_B : MonoBehaviour
     private void OnDisable()
     {
         myIdol.idolEvent.RemoveListener(HateIdol);
+        myIdol.event1.RemoveListener(stringWrite2);
     }
 
     /// <summary>
@@ -29,4 +33,10 @@ public class Sub_B : MonoBehaviour
     {
         print(idolAction + " I will hate you forever!");
     }
+
+    public void stringWrite2()
+    {
+        print("粉丝B+》》》》》》》");
+    }
+
 }

@@ -316,10 +316,10 @@
     <Compile Include="Assets\ComDevelop\MeshEditor\MeshMaker\Script\MeshMakerVertex.cs" />
     <Compile Include="Assets\ComDevelop\MoblieTool\LoadResources\LoadResourceTool.cs" />
     <Compile Include="Assets\GetGPS.cs" />
+    <Compile Include="Assets\LearningSpace\DelegateUnityActionEvent\Delegate\TestDelegate.cs" />
     <Compile Include="Assets\LearningSpace\DelegateUnityActionEvent\DelegateC#\Idol.cs" />
     <Compile Include="Assets\LearningSpace\DelegateUnityActionEvent\DelegateC#\SubscriberA.cs" />
     <Compile Include="Assets\LearningSpace\DelegateUnityActionEvent\DelegateC#\SubscriberB.cs" />
-    <Compile Include="Assets\LearningSpace\DelegateUnityActionEvent\TestDelegate.cs" />
     <Compile Include="Assets\LearningSpace\DelegateUnityActionEvent\UnityEvent\Idol_event.cs" />
     <Compile Include="Assets\LearningSpace\DelegateUnityActionEvent\UnityEvent\Sub_A.cs" />
     <Compile Include="Assets\LearningSpace\DelegateUnityActionEvent\UnityEvent\Sub_B.cs" />

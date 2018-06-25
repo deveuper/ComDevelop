@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/LearningSpace/DelegateUnityActionEvent/DelegateC#/New Scene.unity
+- path: Assets/LearningSpace/DelegateUnityActionEvent/UnityEvent/New Scene 1.unity
   isLoaded: 1
   isActive: 1

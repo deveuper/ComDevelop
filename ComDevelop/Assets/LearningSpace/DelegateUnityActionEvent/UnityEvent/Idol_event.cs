@@ -1,6 +1,4 @@
-﻿
-
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
 
 //使用Serializable序列化IdolEvent, 否则无法在Editor中显示
@@ -12,6 +10,7 @@ public class IdolEvent : UnityEvent<string>
 
 public class Idol_event : MonoBehaviour
 {
+    public UnityEvent event1 = new UnityEvent();
     //public delegate void IdolBehaviour(string behaviour);
     //public event IdolBehaviour IdolDoSomethingHandler;
     public IdolEvent idolEvent;
@@ -24,5 +23,16 @@ public class Idol_event : MonoBehaviour
             idolEvent = new IdolEvent();
         }
         idolEvent.Invoke("Idol give up writing.");
+
+        event1.AddListener(stringWrite);
+
+        event1.Invoke();
+
     }
+    public void stringWrite()
+    {
+        print("偶像主播+  ");
+    }
+
+
 }
