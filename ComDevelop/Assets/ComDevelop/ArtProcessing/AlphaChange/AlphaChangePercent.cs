@@ -33,13 +33,15 @@ namespace ComDevelop.ART
                 {
                     if (fadePercent == 0)
                     {
-                        gameObject.SetActive(false);
+                        gameObject.GetComponent<Renderer>().enabled = false;
                     }
                     alphaChangeToTransBool = false;
                 }
             }
             if (alphaChangeToBackBool)
             {
+                gameObject.GetComponent<Renderer>().enabled = true;
+
                 if (GameObjShow() == fadePercent)
                 {
                     alphaChangeToBackBool = false;
