@@ -253,10 +253,10 @@
     <Compile Include="Assets\BloomObject\letRenderTextureAspectEqualsToScreenAspect.cs" />
     <Compile Include="Assets\BloomObject\renderBloomRT.cs" />
     <Compile Include="Assets\CameraFollow.cs" />
-    <Compile Include="Assets\ComDevelop\ArtProcessing\AlphaChange\AlphaChangePercent.cs" />
-    <Compile Include="Assets\ComDevelop\ArtProcessing\AlphaChange\ChangeAlpha.cs" />
-    <Compile Include="Assets\ComDevelop\ArtProcessing\AlphaChange\MaterialRenderingMode.cs" />
-    <Compile Include="Assets\ComDevelop\ArtProcessing\AlphaChange\ShowAlpha.cs" />
+    <Compile Include="Assets\ComDevelop\ArtProcessing\AlphaChange\Scripts\AlphaChangePercent.cs" />
+    <Compile Include="Assets\ComDevelop\ArtProcessing\AlphaChange\Scripts\ChangeAlpha.cs" />
+    <Compile Include="Assets\ComDevelop\ArtProcessing\AlphaChange\Scripts\MaterialRenderingMode.cs" />
+    <Compile Include="Assets\ComDevelop\ArtProcessing\AlphaChange\Scripts\ShowAlpha.cs" />
     <Compile Include="Assets\ComDevelop\ArtProcessing\AlphaChange\TestAlphaController.cs" />
     <Compile Include="Assets\ComDevelop\ArtProcessing\AlphaChange\TestUsingAlphaChange.cs" />
     <Compile Include="Assets\ComDevelop\ComTool\Camera\Camera3rd\ThirdPlayerController.cs" />
@@ -266,12 +266,15 @@
     <Compile Include="Assets\ComDevelop\ComTool\Camera\CameraRotateTarget.cs" />
     <Compile Include="Assets\ComDevelop\ComTool\Camera\SandBoxCamera\SandBoxCamera.cs" />
     <Compile Include="Assets\ComDevelop\ComTool\DebugTool\LogAppearance.cs" />
+    <Compile Include="Assets\ComDevelop\ComTool\DebugTool\ShowFPS.cs" />
     <Compile Include="Assets\ComDevelop\ComTool\GameCompoent\CollectionHelper.cs" />
     <Compile Include="Assets\ComDevelop\ComTool\GameCompoent\DoNotDestroyOnLoad_Com.cs" />
     <Compile Include="Assets\ComDevelop\ComTool\GameCompoent\GameObjectPool.cs" />
     <Compile Include="Assets\ComDevelop\ComTool\GameCompoent\GameSingleton.cs" />
+    <Compile Include="Assets\ComDevelop\ComTool\GameCompoent\QuitGame.cs" />
     <Compile Include="Assets\ComDevelop\ComTool\GameCompoent\SimulateGravity.cs" />
     <Compile Include="Assets\ComDevelop\ComTool\GameCompoent\TransformHelper.cs" />
+    <Compile Include="Assets\ComDevelop\ComTool\GPS\GetGPS.cs" />
     <Compile Include="Assets\ComDevelop\ComTool\Input\MouseEvent\MouseInputEvent.cs" />
     <Compile Include="Assets\ComDevelop\ComTool\MapMaker\ClickToMove.cs" />
     <Compile Include="Assets\ComDevelop\ComTool\MapMaker\FreeCam.cs" />
@@ -284,7 +287,6 @@
     <Compile Include="Assets\ComDevelop\ComTool\OpenEXE\Scripts\OpenEXE.cs" />
     <Compile Include="Assets\ComDevelop\ComTool\OpenFileEidtor\OpenFileName.cs" />
     <Compile Include="Assets\ComDevelop\ComTool\OpenFileEidtor\OpenWindow.cs" />
-    <Compile Include="Assets\ComDevelop\ComTool\ProgramTools\ShowFPS.cs" />
     <Compile Include="Assets\ComDevelop\ComTool\SimplePhysicsToolkit1.2\SimplePhysicsToolkit v1.2\SimplePhysicsToolkit\Scripts\BouncePlate.cs" />
     <Compile Include="Assets\ComDevelop\ComTool\SimplePhysicsToolkit1.2\SimplePhysicsToolkit v1.2\SimplePhysicsToolkit\Scripts\DestroyObjects.cs" />
     <Compile Include="Assets\ComDevelop\ComTool\SimplePhysicsToolkit1.2\SimplePhysicsToolkit v1.2\SimplePhysicsToolkit\Scripts\InteractableItem.cs" />
@@ -308,14 +310,8 @@
     <Compile Include="Assets\ComDevelop\LoadScene\Scene\Scripts\SilderWithCanvasLoad.cs" />
     <Compile Include="Assets\ComDevelop\LoadScene\Scene\Scripts\UnityLoadScene.cs" />
     <Compile Include="Assets\ComDevelop\MeshEditor\MeshCombine\CombineMesher.cs" />
-    <Compile Include="Assets\ComDevelop\MeshEditor\MeshMaker\Script\MeshMaker.cs" />
-    <Compile Include="Assets\ComDevelop\MeshEditor\MeshMaker\Script\MeshMakerBase.cs" />
-    <Compile Include="Assets\ComDevelop\MeshEditor\MeshMaker\Script\MeshMakerEdge.cs" />
-    <Compile Include="Assets\ComDevelop\MeshEditor\MeshMaker\Script\MeshMakerTool.cs" />
-    <Compile Include="Assets\ComDevelop\MeshEditor\MeshMaker\Script\MeshMakerTriangle.cs" />
-    <Compile Include="Assets\ComDevelop\MeshEditor\MeshMaker\Script\MeshMakerVertex.cs" />
     <Compile Include="Assets\ComDevelop\MoblieTool\LoadResources\LoadResourceTool.cs" />
-    <Compile Include="Assets\GetGPS.cs" />
+    <Compile Include="Assets\ComDevelop\XRspace\GetXRDevice.cs" />
     <Compile Include="Assets\LearningSpace\DelegateUnityActionEvent\Delegate\TestDelegate.cs" />
     <Compile Include="Assets\LearningSpace\DelegateUnityActionEvent\DelegateC#\Idol.cs" />
     <Compile Include="Assets\LearningSpace\DelegateUnityActionEvent\DelegateC#\SubscriberA.cs" />
@@ -330,8 +326,9 @@
     <None Include="Assets\BloomObject\bloomEmitter.shader" />
     <None Include="Assets\BloomObject\renderBloomTex.shader" />
     <None Include="Assets\BloomObject\原帖地址.txt" />
+    <None Include="Assets\ComDevelop\ArtProcessing\Reflact_SkyBox\readme.txt" />
     <None Include="Assets\ComDevelop\ComTool\Camera\CameraMultipleScreen\readMe.txt" />
-    <None Include="Assets\ComDevelop\ComTool\DebugTool\介绍.txt" />
+    <None Include="Assets\ComDevelop\ComTool\DebugTool\readMe.txt" />
     <None Include="Assets\ComDevelop\ComTool\OpenEXE\Textures and Sprites\SF UI\Background\LICENSE.txt" />
     <None Include="Assets\ComDevelop\ComTool\SimplePhysicsToolkit1.2\ReadMe.txt" />
     <None Include="Assets\ComDevelop\ComTool\SimplePhysicsToolkit1.2\SimplePhysicsToolkit v1.2\SimplePhysicsToolkit\Readme-Overview.txt" />
@@ -492,7 +489,7 @@
     <None Include="Assets\ComDevelop\ShaderTemplate\Templates\Shaders\VideoDecodeOSX.shader.txt" />
     <None Include="Assets\ComDevelop\ShaderTemplate\Templates\Shaders\Wind\Shaders\SampleSurface.shader.txt" />
     <None Include="Assets\ComDevelop\ShaderTemplate\Templates\Shaders\Wind\Shaders\SampleVF.shader.txt" />
-    <None Include="Assets\LearningSpace\DelegateUnityActionEvent\帖子.txt" />
+    <None Include="Assets\LearningSpace\DelegateUnityActionEvent\Website_Learning.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

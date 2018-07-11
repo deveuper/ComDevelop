@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/ComDevelop/ArtProcessing/AlphaChange/AlphaCahangeScene.unity
+- path: Assets/ComDevelop/ComTool/GPS/GPS.unity
   isLoaded: 1
   isActive: 1
