@@ -34,7 +34,7 @@ Uinty Develop tool：Games、Art、Shader...
 2. Part of the code is written by the forum tutorial.
 3. The tool is in beta. Please understand if there is any error.
 
-# ________________________________________________________________________________________________________________
+# 
 
 # ComDevelop zh
 
