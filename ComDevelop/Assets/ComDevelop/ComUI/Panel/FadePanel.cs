@@ -8,7 +8,7 @@ namespace ComDevelop.ComUI
     /// <summary>
     /// Fade Panel :
     ///             From Transport to Dark and then form dark to transport:
-    ///             In On Game ,just have only one fadepanel,and you can do thing like load scene in action
+    ///             On Game runtime ,just have only one fadepanel,and you can do thing like load scene in action
     /// </summary>
     [RequireComponent(typeof(CanvasGroup))]
     public class FadePanel : UIPanel
@@ -19,7 +19,7 @@ namespace ComDevelop.ComUI
         public float InternalWaitTime = 0.5f;
         [HideInInspector]
         public bool inProgress = true;
-        public GameObject uiManager;
+        public GameObject uiManager;//not using in this scripts
         private void Awake()
         {
             DontDestroyOnLoad(this.gameObject);

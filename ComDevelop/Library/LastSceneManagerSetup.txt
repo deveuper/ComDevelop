@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/ComDevelop/ComTool/GPS/GPS.unity
+- path: Assets/ComDevelop/ComUI/Scene/FadePanel.unity
   isLoaded: 1
   isActive: 1
