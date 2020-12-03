@@ -1,4 +1,4 @@
-# ComDevelop en
+# ComDevelop EN
 
 #### Introduce
 Uinty Develop tool：Games、Art、Shader...
@@ -38,7 +38,7 @@ After 2 years,I am back to fix my tool for unity
 
 # 
 
-# ComDevelop zh
+# ComDevelop ZH
 
 #### 项目介绍
 Uinty自用开发工具：游戏、美术、Shader等等
