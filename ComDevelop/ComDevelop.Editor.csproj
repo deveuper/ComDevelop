@@ -321,6 +321,8 @@
     <Compile Include="Assets\ComDevelop\Editor\Shader_Tools\MyEditor.cs" />
     <Compile Include="Assets\ComDevelop\Editor\SVN_Tools\SelectionUtil.cs" />
     <Compile Include="Assets\ComDevelop\Editor\SVN_Tools\SVNTool.cs" />
+    <Compile Include="Assets\ComDevelop\MeshEditor\MeshMaker\Editor\MeshMakerEditor.cs" />
+    <Compile Include="Assets\ComDevelop\MeshEditor\MeshMaker\Editor\MeshMakerUVExhibition.cs" />
     <Compile Include="Assets\ComDevelop\ShaderTemplate\Editor\ScriptsTemplate\LuaCreateUtils.cs" />
     <Compile Include="Assets\ComDevelop\ShaderTemplate\Editor\ScriptsTemplate\ProjectWindowUtilEx.cs" />
     <Compile Include="Assets\ComDevelop\ShaderTemplate\Editor\ScriptsTemplate\ScriptTemplateGenerator.cs" />

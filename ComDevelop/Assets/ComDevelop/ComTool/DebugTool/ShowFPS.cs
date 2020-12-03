@@ -2,7 +2,10 @@ using UnityEngine;
 
 public class ShowFPS : MonoBehaviour
 {
-    //更新的时间间隔
+
+    /// <summary>
+    /// 更新的时间间隔:Runtime可用
+    /// </summary>
     public float UpdateInterval = 0.5F;
     //最后的时间间隔
     private float _lastInterval;
@@ -15,7 +18,7 @@ public class ShowFPS : MonoBehaviour
     {
         //Application.targetFrameRate=40;
 
-        UpdateInterval = Time.realtimeSinceStartup;
+        //UpdateInterval = Time.realtimeSinceStartup;
 
         _frames = 0;
     }

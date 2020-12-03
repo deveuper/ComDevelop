@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/ComDevelop/ComUI/Scene/FadePanel.unity
+- path: Assets/BloomObject/New Scene.unity
   isLoaded: 1
   isActive: 1

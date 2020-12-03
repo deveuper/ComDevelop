@@ -31,7 +31,7 @@ public class GetGPS : MonoBehaviour
     /// <summary>  
     /// 停止刷新位置（节省手机电量）  
     /// </summary>  
-    public void StopGPS()
+    void StopGPS()
     {
         Input.location.Stop();
     }

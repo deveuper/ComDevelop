@@ -24,7 +24,7 @@ namespace ComDevelop.ComTool
         private void FixedUpdate()
         {
             Vector3 StartPosition = Target.position + _relativeCameraPosition;
-            //Vector3 AbovePosition = Target.position + Vector3.up * cameraPositionMessage;
+            Vector3 AbovePosition = Target.position + Vector3.up * cameraPositionMessage;
             transform.position = Vector3.Lerp(transform.position, StartPosition, Smooth * Time.deltaTime);
             //SmoothLookAt();
         }

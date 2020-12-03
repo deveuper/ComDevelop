@@ -29,10 +29,10 @@ namespace ComDevelop.ComUI
         }
 
         // Update is called once per frame
-        void Update()
-        {
+        //void Update()
+        //{
 
-        }
+        //}
         [SerializeField]
         private MainMenuPanel mainMenuPanel;
         [SerializeField]

@@ -250,21 +250,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\_Script\MeshCreater.cs" />
-    <Compile Include="Assets\_Script\MeshPrinter.cs" />
-    <Compile Include="Assets\_Script\MouseFollowRotation.cs" />
-    <Compile Include="Assets\_Script\NewBehaviourScript.cs" />
-    <Compile Include="Assets\_Script\SceneManagers.cs" />
     <Compile Include="Assets\BloomObject\AE_GroupBloom.cs" />
     <Compile Include="Assets\BloomObject\letRenderTextureAspectEqualsToScreenAspect.cs" />
     <Compile Include="Assets\BloomObject\renderBloomRT.cs" />
-    <Compile Include="Assets\CameraFollow.cs" />
     <Compile Include="Assets\ComDevelop\ArtProcessing\AlphaChange\Scripts\AlphaChangePercent.cs" />
     <Compile Include="Assets\ComDevelop\ArtProcessing\AlphaChange\Scripts\ChangeAlpha.cs" />
     <Compile Include="Assets\ComDevelop\ArtProcessing\AlphaChange\Scripts\MaterialRenderingMode.cs" />
     <Compile Include="Assets\ComDevelop\ArtProcessing\AlphaChange\Scripts\ShowAlpha.cs" />
     <Compile Include="Assets\ComDevelop\ArtProcessing\AlphaChange\TestAlphaController.cs" />
     <Compile Include="Assets\ComDevelop\ArtProcessing\AlphaChange\TestUsingAlphaChange.cs" />
+    <Compile Include="Assets\ComDevelop\ComTool\Camera\Camera3rd\CameraFollow.cs" />
     <Compile Include="Assets\ComDevelop\ComTool\Camera\Camera3rd\ThirdPlayerController.cs" />
     <Compile Include="Assets\ComDevelop\ComTool\Camera\CameraMovement.cs" />
     <Compile Include="Assets\ComDevelop\ComTool\Camera\CameraMultipleScreen\Demo\DisplayController.cs" />
@@ -316,6 +311,12 @@
     <Compile Include="Assets\ComDevelop\LoadScene\Scene\Scripts\SilderWithCanvasLoad.cs" />
     <Compile Include="Assets\ComDevelop\LoadScene\Scene\Scripts\UnityLoadScene.cs" />
     <Compile Include="Assets\ComDevelop\MeshEditor\MeshCombine\CombineMesher.cs" />
+    <Compile Include="Assets\ComDevelop\MeshEditor\MeshMaker\Script\MeshMaker.cs" />
+    <Compile Include="Assets\ComDevelop\MeshEditor\MeshMaker\Script\MeshMakerBase.cs" />
+    <Compile Include="Assets\ComDevelop\MeshEditor\MeshMaker\Script\MeshMakerEdge.cs" />
+    <Compile Include="Assets\ComDevelop\MeshEditor\MeshMaker\Script\MeshMakerTool.cs" />
+    <Compile Include="Assets\ComDevelop\MeshEditor\MeshMaker\Script\MeshMakerTriangle.cs" />
+    <Compile Include="Assets\ComDevelop\MeshEditor\MeshMaker\Script\MeshMakerVertex.cs" />
     <Compile Include="Assets\ComDevelop\MoblieTool\LoadResources\LoadResourceTool.cs" />
     <Compile Include="Assets\ComDevelop\XRspace\GetXRDevice.cs" />
     <Compile Include="Assets\LearningSpace\DelegateUnityActionEvent\Delegate\TestDelegate.cs" />

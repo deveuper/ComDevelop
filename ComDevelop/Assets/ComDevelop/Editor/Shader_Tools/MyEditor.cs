@@ -22,14 +22,13 @@ namespace ComDevelop.EditorTool.ShaderTool
         private static string shaderName;
         private static float changeValue;
         //选择贴图的对象
-        //private Texture texture;
-
+        private Texture texture;
         public static GameObject changeObj;
         private bool isFather = true;
         public void Awake()
         {
             //在资源中读取一张贴图
-            //texture = Resources.Load("1") as Texture;
+            texture = Resources.Load("1") as Texture;
         }
         static string temp;
         //绘制窗口时调用
