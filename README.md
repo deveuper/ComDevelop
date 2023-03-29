@@ -1,42 +1,3 @@
-# ComDevelop EN
-
-#### Introduce
-Uinty Develop tool：Games、Art、Shader...
-After 2 years,I am back to fix my tool for unity
-
-#### Package Information
-1. ComTools：Such as Camera、Mouse Control、ObjectPool.
-2. ArtSpace：Creating Art effects in Unity.
-3. ComUI:  Based UGUI framework (beta),
-4. Editor: Develop common extension tools: SVN in Unity to pull and push, find references (modified from MOMO) and other tools.
-5. Games: scene loading, physics, XR, video and other tools.
-6. LearningSpace: learning part,can be deleted if you don't need,
-#### Installation Tutorial
-
-1. Imported into 2017.4.40c1 and above.
-2. Only keep the ComDevelop folder.
-
-#### Instructions Manual
-
-1. Useing Unity2017.4.40 or later, unity5.x was not tested.
-2. Need reference namespace ComDevelop._XXX in coding.
-3. LightBar in ArtSpace needs to be baked again.
-
-#### Participating in contributions
-
-1. Fork Project.
-2. Create a new Feat_xxx branch.
-3. Submit the code.
-4. New Pull Request.
-
-
-#### Description
-1. Physical use AssetStore free plugin.
-2. Part of the code is written by the forum tutorial.
-3. The tool is in beta. Please understand if there is any error.
-4. Update tools,delete some overtime api functions.In the future comDevelop tool will update to 2019 version 
-
-# 
 
 # ComDevelop ZH
 
@@ -75,3 +36,46 @@ Uinty自用开发工具：游戏、美术、Shader等等
 2. 部分代码由论坛教程写成
 3. 工具为beta版，如有错误请谅解
 4. 删除部分过时api及功能，未来准备升级的到2019版本
+
+# 
+
+# ComDevelop EN
+
+#### Project Introduction
+Unity personal development tools for various purposes, including gaming, art, Shaders, etc. Updating personal Unity toolkit after 2 years.
+
+#### Development Package Introduction
+1.ComTools: Common scripts such as cameras, mouse operations, object pools, etc.
+2.ArtSpace: Art-related effects and tools
+3.ComUI: UGUI-based framework (beta)
+4.Editor: Common development extension tools: Unity internal SVN upload and update, search references (modified from Yumeng MOMO), etc.
+5.Games: Scene loading, physics, XR, video tools, etc.
+6.LearningSpace: Learning section, can be deleted during development
+
+#### Installation Tutorial
+
+1. Imported into 2017.4.40c1 and above.
+2. Keep only the ComDevelop folder
+
+#### Instructions Manual
+
+1. Please use 2017.4.40c1 or higher versions; Unity 5.x not tested
+2. When using, reference ComDevelop._XXX
+3. The LightBar in ArtSpace needs to be baked again
+
+#### Participating in contributions
+
+1. Fork Project.
+2. Create a new Feat_xxx branch.
+3. Submit the code.
+4. New Pull Request.
+
+
+#### Description
+1. Physics uses free plugins from the AssetStore
+2. Some code is written by the forum tutorial.
+3. The tool is in beta. Please understand if there is any error.
+4. Removed some outdated APIs and features，Planning to upgrade to the 2019 version in the future
+
+
+
