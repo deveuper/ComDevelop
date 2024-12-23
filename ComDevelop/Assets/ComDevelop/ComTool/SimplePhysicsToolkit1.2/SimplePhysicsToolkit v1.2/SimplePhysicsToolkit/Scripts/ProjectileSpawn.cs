@@ -11,7 +11,7 @@ using System.Collections;
 */
 public class ProjectileSpawn : MonoBehaviour {
 
-	public bool enabled = true;
+	public new bool enabled = true;
 	public float inaccuracy = 0.5f;
 	public float emitRate = 1.0f;
 	public float speed = 1.5f;

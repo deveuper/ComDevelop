@@ -12,46 +12,63 @@ namespace ComDevelop.LocaScene
 
     public class LoadSceneSilder : BaseLoadScene
     {
-        public override IEnumerator LoadScene()
+        private bool isReadyToChange = false;
+
+        private void InitializeSlider()
         {
-            return base.LoadScene();
-            if (loadingSlider == null)
+            if (!loadingSlider)
             {
                 loadingSlider = GameObject.FindObjectOfType<Slider>();
-                loadingSlider.value = 0.0f;
+                if(loadingSlider)
+                {
+                    loadingSlider.value = 0f;
+                }
+                else
+                {
+                    Debug.LogError("Loading slider not found!");
+                }
             }
         }
-        public override void Loading()
+
+        protected override void UpdateUI()
         {
-            targetValue = operation.progress;
-
-            if (operation.progress >= 0.9f)
-            {
-                targetValue = 1.0f;
-            }
-
-            if (targetValue != loadingSlider.value)
+            if(loadingSlider && targetValue != loadingSlider.value)
             {
                 //插值运算  
-                loadingSlider.value = Mathf.Lerp(loadingSlider.value, targetValue, Time.deltaTime * loadingSpeed);
-                if (Mathf.Abs(loadingSlider.value - targetValue) < 0.01f)
+                float displayValue = targetValue;
+                // 当实际加载达到90%时，显示值渐进到100%
+                if(operation.progress >= 0.9f)
                 {
-                    loadingSlider.value = targetValue;
+                    displayValue = 1.0f;
+                    isReadyToChange = true;
                 }
-                //loadingSlider.value = targetValue;
+
+                loadingSlider.value = Mathf.Lerp(loadingSlider.value, displayValue, Time.deltaTime * loadingSpeed);
+                
+                // 确保最后一定会到达目标值
+                if (isReadyToChange && displayValue - loadingSlider.value < 0.01f)
+                {
+                    loadingSlider.value = 1.0f;
+                }
             }
 
-            loadingText.text = ((int)(loadingSlider.value * 100)).ToString() + "%";
-
-            if ((int)(loadingSlider.value * 100) == 100)
+            if(loadingText)
             {
-                //允许异步加载完毕后自动切换场景  
+                // 显示进度文本
+                loadingText.text = string.Format("{0}%", (int)(loadingSlider.value * 100));
+            }
+        }
+
+        public override void Loading()
+        {
+            InitializeSlider();
+            UpdateLoadingProgress();
+
+            // 当实际加载完成且进度条显示100%时切换场景
+            if (operation.progress >= 0.9f && loadingSlider.value >= 0.999f)
+            {
+                OnLoadComplete();
                 operation.allowSceneActivation = true;
-                //销毁所有Gameobject
-                for (int i = 0; i < DoNotDestroyOnLoad_Com.FristNotDestoryObjList.Count; i++)
-                {
-                    GameObject.Destroy(DoNotDestroyOnLoad_Com.FristNotDestoryObjList[i]);
-                }
             }
         }
     }

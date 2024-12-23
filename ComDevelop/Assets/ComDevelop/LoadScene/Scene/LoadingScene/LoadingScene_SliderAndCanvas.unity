@@ -469,7 +469,7 @@ GameObject:
   - component: {fileID: 437818059}
   - component: {fileID: 437818058}
   m_Layer: 0
-  m_Name: LoadingScene
+  m_Name: LoadingSceneSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

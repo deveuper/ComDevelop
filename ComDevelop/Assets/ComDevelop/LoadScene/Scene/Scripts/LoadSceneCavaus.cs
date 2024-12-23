@@ -1,34 +1,35 @@
-﻿using ComDevelop.ComTool;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using UnityEngine;
+﻿using UnityEngine;
+using ComDevelop.ComUI;
 
 namespace ComDevelop.LocaScene
 {
     /// <summary>
     /// 画布明暗切换场景
     /// </summary>
-    [Serializable]
+    [System.Serializable]
     public class LoadSceneCanvas : BaseLoadScene
     {
         public override void Loading()
         {
-            ComUI.UIManager.Instance.fadePanel.fadeSpeed = loadingSpeed;
-            ComUI.UIManager.Instance.fadePanel.InternalWaitTime = internalTime;
-            if (ComUI.UIManager.Instance.fadePanel.cGroup.alpha >= 0.9f)
+            if(UIManager.Instance == null || UIManager.Instance.fadePanel == null)
+            {
+                Debug.LogError("Fade panel not found!");
+                return;
+            }
+
+            var fadePanel = UIManager.Instance.fadePanel;
+            fadePanel.fadeSpeed = loadingSpeed;
+            fadePanel.InternalWaitTime = internalTime;
+
+            if (fadePanel.cGroup.alpha >= 0.9f && CameraShow != null)
             {
                 CameraShow.SetActive(true);
             }
-            if (!ComUI.UIManager.Instance.fadePanel.inProgress && operation.progress >= 0.9f)
-            {
-                operation.allowSceneActivation = true;
-                for (int i = 0; i < DoNotDestroyOnLoad_Com.FristNotDestoryObjList.Count; i++)
-                {
-                    GameObject.Destroy(DoNotDestroyOnLoad_Com.FristNotDestoryObjList[i].gameObject);
-                }
 
+            if (!fadePanel.inProgress && operation.progress >= 0.9f)
+            {
+                OnLoadComplete();
+                operation.allowSceneActivation = true;
             }
         }
     }

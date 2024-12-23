@@ -11,7 +11,7 @@ using System.Collections;
 */
 public class Magnet : MonoBehaviour {
 	public float magnetForce = 15.0f;
-	public bool enabled = true;
+	public new bool enabled = true;
 	public bool attract = true;
 	public float innerRadius = 2.0f;
 	public float outerRadius = 5.0f; 

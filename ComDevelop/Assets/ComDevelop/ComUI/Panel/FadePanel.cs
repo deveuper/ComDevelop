@@ -1,67 +1,138 @@
 ﻿using System;
 using System.Collections;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 namespace ComDevelop.ComUI
 {
     /// <summary>
-    /// Fade Panel :
-    ///             From Transport to Dark and then form dark to transport:
-    ///             In On Game ,just have only one fadepanel,and you can do thing like load scene in action
+    /// 渐变面板：实现场景切换时的渐入渐出效果
     /// </summary>
     [RequireComponent(typeof(CanvasGroup))]
     public class FadePanel : UIPanel
     {
-        [HideInInspector]
-        public CanvasGroup cGroup;
-        public float fadeSpeed = 5;//control by loadScene script
+        [Header("Fade Settings")]
+        public FadeType defaultFadeType = FadeType.FadeOutIn;  // 默认渐变类型
+        public float fadeSpeed = 5f;
         public float InternalWaitTime = 0.5f;
-        [HideInInspector]
-        public bool inProgress = true;
-        public GameObject uiManager;
-        private void Awake()
+
+        [HideInInspector] public CanvasGroup cGroup;
+        [HideInInspector] public bool inProgress = true;
+
+        /// <summary>
+        /// 渐变类型
+        /// </summary>
+        public enum FadeType
         {
-            DontDestroyOnLoad(this.gameObject);
-            DontDestroyOnLoad(transform.parent);
-            DontDestroyOnLoad(UIManager.Instance.gameObject);
-            cGroup = GetComponent<CanvasGroup>();
+            FadeIn,             // 从透明到不透明
+            FadeOut,            // 从不透明到透明
+            FadeInOut,          // 从透明到不透明再到透明
+            FadeOutIn          // 从不透明到透明再到不透明
         }
 
-        public IEnumerator Fade(Action finalCallBack, params Action[] callback)
+        protected override void Awake()
+        {
+            base.Awake();
+            cGroup = GetComponent<CanvasGroup>();
+            keepAliveOnLoad = true;  // FadePanel需要在场景加载时保持
+        }
+
+        /// <summary>
+        /// 执行渐变效果
+        /// </summary>
+        ///         /// <param name="finalCallBack">渐变完成后的回调</param>
+        /// <param name="callback">渐变过程中的回调</param>
+        public IEnumerator Fade(FadeType fadeType, float waitTime = 0.5f, Action callback = null)
         {
             inProgress = true;
-            while (cGroup.alpha < 0.95f)//From transport to black
+            
+            // 根据类型初始化alpha值
+            InitializeAlpha(fadeType);
+
+            switch (fadeType)
             {
-                cGroup.alpha = Mathf.Lerp(cGroup.alpha, 1, Time.deltaTime * fadeSpeed);
+                case FadeType.FadeIn:
+                    yield return FadeTo(1f);
+                    break;
+
+                case FadeType.FadeOut:
+                    yield return FadeTo(0f);
+                    break;
+
+                case FadeType.FadeInOut:
+                    yield return FadeTo(1f);
+                    yield return new WaitForSeconds(waitTime);
+                    yield return FadeTo(0f);
+                    break;
+
+                case FadeType.FadeOutIn:
+                    yield return FadeTo(0f);
+                    yield return new WaitForSeconds(waitTime);
+                    yield return FadeTo(1f);
+                    break;
+            }
+
+            inProgress = false;
+            
+            if(callback != null)
+            {
+                callback.Invoke();
+            }
+        }
+
+        /// <summary>
+        /// 根据渐变类型初始化alpha值
+        /// </summary>
+        private void InitializeAlpha(FadeType fadeType)
+        {
+            switch (fadeType)
+            {
+                case FadeType.FadeIn:
+                case FadeType.FadeInOut:
+                    cGroup.alpha = 0f;
+                    break;
+                case FadeType.FadeOut:
+                case FadeType.FadeOutIn:
+                    cGroup.alpha = 1f;
+                    break;
+            }
+        }
+
+        /// <summary>
+        /// 渐变到指定alpha值
+        /// </summary>
+        private IEnumerator FadeTo(float targetAlpha)
+        {
+            float currentAlpha = cGroup.alpha;
+            float elapsedTime = 0;
+            
+            while (elapsedTime < 1)
+            {
+                elapsedTime += Time.deltaTime * fadeSpeed;
+                // 使用SmoothStep使过渡更加平滑
+                float t = Mathf.SmoothStep(0, 1, elapsedTime);
+                cGroup.alpha = Mathf.Lerp(currentAlpha, targetAlpha, t);
                 yield return null;
             }
-            //show UI form black to transport
-            if (callback != null)//Do some thing when the panel is black
+            
+            // 确保最终值是精确的
+            cGroup.alpha = targetAlpha;
+        }
+
+        // 为了保持向后兼容，保留原来的Fade方法
+        public IEnumerator Fade(Action finalCallBack, params Action[] callback)
+        {
+            yield return Fade(FadeType.FadeOutIn, InternalWaitTime, finalCallBack);
+            
+            if (callback != null)
             {
                 foreach (Action action in callback)
                 {
-                    action.Invoke();//Do you want to 
+                    if(action != null)
+                    {
+                        action.Invoke();
+                    }
                 }
             }
-            //finalCallBack.Invoke();
-            inProgress = false;
-            cGroup.alpha = 1;
-            yield return new WaitForSeconds(InternalWaitTime);//wait seconds when black
-
-            while (cGroup.alpha > 0.05f)//From black to transport
-            {
-                cGroup.alpha = Mathf.Lerp(cGroup.alpha, 0, Time.deltaTime * fadeSpeed);
-                yield return null;
-            }
-            cGroup.alpha = 0;
-
-            Destroy(transform.parent.gameObject);
-            Destroy(UIManager.Instance.gameObject);
-
-            //inProgress = false;
         }
-        
     }
-
 }

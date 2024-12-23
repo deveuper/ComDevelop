@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 524179627}
   - component: {fileID: 524179626}
   - component: {fileID: 524179625}
+  - component: {fileID: 524179629}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -199,6 +200,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &524179629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 524179624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26388997f34cd784087258ac4390bb40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  centerType: 1
+  customRotationPoint: {fileID: 0}
+  viewDistance: 10
+  moveSpeed: 5
+  horizontalRotateSpeed: 20
+  verticalRotateSpeed: 20
+  rotationSpeedMultiplier: 1
+  smoothTime: 2
+  verticalMinAngle: -5
+  verticalMaxAngle: 60
+  minDistance: 10
+  maxDistance: 100
 --- !u!1 &654004341
 GameObject:
   m_ObjectHideFlags: 0
@@ -358,13 +382,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 814670666}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: 0.11454749, y: -0, z: -0, w: 0.9934178}
+  m_LocalPosition: {x: 0, y: 3.46, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 13.155001, y: 0, z: 0}
 --- !u!114 &814670671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -376,21 +400,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f33d2944d909efc4a869b8ecc2a6b340, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TargetPlatform: 0
+  targetPlatform: 0
   targetObject: {fileID: 524179628}
-  viewCamera: {fileID: 814670670}
+  viewCamera: {fileID: 814670669}
   startDistance: 10
-  xSpeed: 2
-  ySpeed: 5
-  yMinLimit: -5
-  yMaxLimit: 60
-  distanceMin: 0.5
+  distanceMin: 2
   distanceMax: 15
-  smoothTime: 3.39
-  objectLayer:
+  xSpeed: 15
+  ySpeed: 15
+  yMinLimit: -90
+  yMaxLimit: 90
+  smoothTime: 2
+  selectableLayer:
     serializedVersion: 2
     m_Bits: 4294967295
-  PointCursor: {fileID: 654004341}
+  targetIndicator: {fileID: 654004341}
+  moveSpeed: 5
+  arrivalDistance: 0.1
 --- !u!1 &1194914026
 GameObject:
   m_ObjectHideFlags: 0
@@ -484,14 +510,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 1194914026}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1daaa367631a1994c95fc727f87955d0, type: 3}
+  m_Script: {fileID: 11500000, guid: 26388997f34cd784087258ac4390bb40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Filters:
-  - {fileID: 524179627}
-  m_Radius: 1.5
-  m_Power: 2
-  m_Method: 0
+  centerType: 1
+  customRotationPoint: {fileID: 0}
+  viewDistance: 2
+  moveSpeed: 5
+  horizontalRotateSpeed: 20
+  verticalRotateSpeed: 20
+  rotationSpeedMultiplier: 1
+  smoothTime: 2
+  verticalMinAngle: -5
+  verticalMaxAngle: 60
+  minDistance: 2
+  maxDistance: 10
 --- !u!1 &1442593549
 GameObject:
   m_ObjectHideFlags: 0
@@ -568,6 +601,7 @@ GameObject:
   - component: {fileID: 1738866034}
   - component: {fileID: 1738866033}
   - component: {fileID: 1738866032}
+  - component: {fileID: 1738866036}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -641,3 +675,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1738866036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1738866031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26388997f34cd784087258ac4390bb40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  centerType: 1
+  customRotationPoint: {fileID: 0}
+  viewDistance: 2
+  moveSpeed: 5
+  horizontalRotateSpeed: 20
+  verticalRotateSpeed: 20
+  rotationSpeedMultiplier: 1
+  smoothTime: 2
+  verticalMinAngle: -5
+  verticalMaxAngle: 60
+  minDistance: 2
+  maxDistance: 10
